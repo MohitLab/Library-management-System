@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-    private final UserRepo userRepo;
     UserService userService;
 
-    public UserController(UserRepo userRepo) {
-        this.userRepo = userRepo;
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
+
 
     @PostMapping("/signUp")
     public String signUp(@RequestBody Users users){
