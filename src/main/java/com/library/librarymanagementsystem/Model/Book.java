@@ -32,4 +32,6 @@ public class Book{
     private Float rating;
 
     private Integer bookPrice;
+
+    private Boolean isIssued;
 }

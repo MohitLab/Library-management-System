@@ -85,4 +85,8 @@ public class BookService {
         }
     }
 
+    public Boolean isBookIssued(String bookID){
+        return bookRepo.findBookByBookID(bookID).getIsIssued();
+    }
+
 }

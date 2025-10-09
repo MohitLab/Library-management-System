@@ -6,24 +6,25 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
-public class Users {
+public class Ledger{
 
     @Id
+    private String ledgerID;
+
+    private String bookID;
+
     private String userID;
 
-    private String userName;
+    private Boolean isDamaged;
 
-    private int age;
+    private LocalDate issueDate;
 
-    private Long phoneNumber;
+    private LocalDate returnDate;
 
-    private String email;
-
-    private Long pendingFine;
-
-    private Boolean hasBook;
 }
